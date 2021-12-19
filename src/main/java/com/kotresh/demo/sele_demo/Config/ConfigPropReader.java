@@ -8,9 +8,6 @@ import java.util.Properties;
 
 public class ConfigPropReader {
 
-	private Properties prop;
-	private FileInputStream ip;
-	
 	public Properties LoadConfigFile() throws IOException
 	  {
 		File file = new File("./src/main/resources/config.properties");

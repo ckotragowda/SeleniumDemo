@@ -2,7 +2,6 @@ package com.kotresh.demo.sele_demo.Util;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -90,7 +89,6 @@ public class ElementUtil {
 			}		
 	}
 
-	@SuppressWarnings("deprecation")
 	public void waitTill(int intWait) 
 	{
 		driver.manage().timeouts().implicitlyWait(intWait,TimeUnit.SECONDS);

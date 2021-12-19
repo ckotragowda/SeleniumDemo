@@ -63,6 +63,7 @@ public class LoginTest_TC1 {
 		startTime = System.currentTimeMillis();		
 	}
 	
+	@SuppressWarnings("static-access")
 	@Test(priority=1,description="verifying login functionality")
 	@Severity(SeverityLevel.NORMAL)
 	@Description("Test Case Description: Verify Login Functionality")

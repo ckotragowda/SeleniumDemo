@@ -7,12 +7,10 @@ import org.openqa.selenium.WebElement;
 import com.kotresh.demo.sele_demo.Util.ElementUtil;
 
 public class objLoginPage {	
-	private WebDriver driver;
 	private static ElementUtil elementUtil;
 	
 	//Constructor for WebDriver/ElementUtil
 	public objLoginPage(WebDriver driver) {
-		this.driver=driver;
 		elementUtil = new ElementUtil(driver); 
 	}
 	
