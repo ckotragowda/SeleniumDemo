@@ -3,6 +3,7 @@ package com.kotresh.demo.sele_demo.mytests;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -22,7 +23,6 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
-
 @Listeners({TestAllureListener.class})
 public class LoginTest_TC1 {
 	DriverMethods dm;
@@ -36,8 +36,7 @@ public class LoginTest_TC1 {
 	long startTime = 0;
 	long endTime = 0;
 	long deltaTime = 0;
-		
-	
+
 	static String strTDFile="./src/main/java/com/kotresh/demo/sele_demo/testData/TestData.xlsx";
 
 //creating object of ExcelUtils class
@@ -86,7 +85,7 @@ public class LoginTest_TC1 {
 		//Click on Submit
 		webObj.VerifyLinksOrButtons(loginPage.btnSubmit(driver), "");
 		//Assert Login Successful
-//		Assert.assertTrue(loginPage.btnSettings(driver).isDisplayed());
+		Assert.assertTrue(loginPage.btnSettings(driver).isDisplayed());
 		//Write Result To Excel
 		if(loginPage.btnSettings(driver).isDisplayed()){
 			excelUtils.setCellValue(1,2,"PASS",strTDFile);
@@ -107,9 +106,8 @@ public class LoginTest_TC1 {
 	public void CheckHttpRequest() {		
 		webObj.verifyLinks(prop.getProperty("URL"));
 	}
-	
+
 	@AfterTest
-	
 	public void setDown() 
 	{
 		driver.quit();

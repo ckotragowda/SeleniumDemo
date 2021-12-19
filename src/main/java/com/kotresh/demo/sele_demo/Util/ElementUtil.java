@@ -16,7 +16,6 @@ import io.qameta.allure.Step;
 public class ElementUtil {
 	
 	private WebDriver driver;
-
 	public ElementUtil(WebDriver driver) {		
 		this.driver=driver;
 	}
@@ -103,7 +102,7 @@ public class ElementUtil {
         try
         {
             URL url = new URL(linkUrl);
-
+            driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
             //Now we will be creating url connection and getting the response code
             HttpURLConnection httpURLConnect=(HttpURLConnection)url.openConnection();
             httpURLConnect.setConnectTimeout(5000);

@@ -43,7 +43,7 @@ public class DriverMethods extends ConfigPropReader {
 			System.out.println("Please Pass The correct browser name");
 		}
 		
-		driver.manage().timeouts().implicitlyWait(40,TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 		driver.get(prop.getProperty("URL"));
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
