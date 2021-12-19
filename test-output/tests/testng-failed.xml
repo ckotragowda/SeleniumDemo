@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [tests]" allow-return-values="true" verbose="10">
+  <test name="SmokeTest(failed)">
+    <parameter name="dummy" value="dummy"/>
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.kotresh.demo.sele_demo.mytests.LoginTest_TC1">
+        <methods>
+          <include name="VerifyLoginPage"/>
+          <include name="setup"/>
+          <include name="setDown"/>
+        </methods>
+      </class> <!-- com.kotresh.demo.sele_demo.mytests.LoginTest_TC1 -->
+    </classes>
+  </test> <!-- SmokeTest(failed) -->
+</suite> <!-- Failed suite [tests] -->

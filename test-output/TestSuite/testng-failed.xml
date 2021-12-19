@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="instances" name="Failed suite [TestSuite]" allow-return-values="true" verbose="10">
+  <test parallel="instances" name="ChromeTest(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="com.kotresh.demo.sele_demo.mytests.LoginTest_TC1">
+        <methods>
+          <include name="VerifyLoginPage"/>
+          <include name="setup"/>
+          <include name="setDown"/>
+        </methods>
+      </class> <!-- com.kotresh.demo.sele_demo.mytests.LoginTest_TC1 -->
+    </classes>
+  </test> <!-- ChromeTest(failed) -->
+</suite> <!-- Failed suite [TestSuite] -->
